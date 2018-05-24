@@ -6,19 +6,19 @@ import java.util.Date;
 
 
 public class PinValidator {
-    private  final int userId = 150;
+    private  final int userId = 1;
     private final int userPassword = 123;
     private int attempt = 0;
     private final long blockTime = 5000;
     private long accountBlockTime = 0;
 
     /**
-     * @param userId       - Идентификатор пользователя
-     * @param userPassword - Пароль пользователя
-     * @return True -  При успешной авторизации, False в противном случае.
-     * @throws AccountLockedExeption - Выбрасывется при временной блокировки аакаунта после 3-х неудаячных попыток
+     * @param userId        Идентификатор пользователя
+     * @param userPassword  Пароль пользователя
+     * @return True - При успешной авторизации, False в противном случае.
+     * @throws AccountLockedExeption  Выбрасывется при временной блокировки аакаунта после 3-х неудаячных попыток
      *                               Ввода Пин-Кода
-     * @throws BadAccount            - Пользователь с такой комбинацией UserID & UserPassword не найден
+     * @throws BadAccount Пользователь с такой комбинацией UserID & UserPassword не найден
      */
     public  boolean userAuth(int userId, int userPassword) throws AccountLockedExeption, BadAccount {
 

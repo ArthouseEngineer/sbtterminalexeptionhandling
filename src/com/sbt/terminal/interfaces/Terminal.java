@@ -8,5 +8,5 @@ public interface Terminal {
 
     boolean addFunds(int userId, int cashSum) throws BadMultiplicity;
 
-    boolean receiveFunds(int userId, int cashSum) throws BadMultiplicity;
+    boolean receiveFunds(int userId, int cashSum) throws BadMultiplicity, BadBalance;
 }
